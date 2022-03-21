@@ -1,0 +1,1015 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css");
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+body {
+  font-size: 17.28px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+.middle {
+  height: 100%;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+/* img{
+    width: 100%;
+} */
+
+.form-control:focus {
+  outline: inherit;
+  box-shadow: none;
+  border-color: #e70078;
+}
+
+.navmenu {
+  background-color: #fff;
+  box-shadow: rgb(0 0 0 / 15%) 0px 5px 9px;
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+}
+
+.menu {
+  display: flex !important;
+  float: right !important;
+  flex-grow: 0;
+}
+.navbar-nav form {
+  display: flex;
+  position: relative;
+}
+.navbar-nav form input {
+  background-color: #ebebeb;
+}
+.navbar-nav form i {
+  position: absolute;
+  right: 19.2px;
+  top: 9.6px;
+  color: #333333;
+}
+.nav-item i {
+  font-size: 24px;
+  color: #000;
+}
+.navbar-nav {
+  align-items: center;
+}
+.navbar-nav li {
+  padding: 0px 20px;
+}
+
+.navbar-nav li p {
+  font-size: 17.28px;
+  color: #000;
+  margin-bottom: 0;
+}
+.dropdown li a {
+  font-size: 15.36px;
+}
+.dropdown li a:hover {
+  background-color: #e70078;
+  color: #fff;
+}
+.dropdown li {
+  padding: 1.92px;
+}
+.searchbutton {
+  position: absolute !important;
+  right: 0;
+}
+.input-group .form-contro {
+  position: relative;
+}
+.postcard {
+  padding-top: 100px;
+  background-color: #dfe5ef;
+}
+.index-profile {
+  background-color: #fff;
+}
+
+.candiate-profile {
+  display: flex;
+}
+.candiate-profile img {
+  width: 100%;
+  border: 3.84px solid #e70078;
+  border-radius: 9.6px;
+  padding: 1.92px;
+  max-width: 76.8px;
+  max-height: 76.8px;
+}
+.candiate-details h3 {
+  margin-bottom: 0;
+}
+.candiate-details h3 a {
+  font-size: 17.28px;
+  font-weight: 600;
+  margin-bottom: 1.92px;
+  text-decoration: none;
+  color: #333333;
+}
+.candiate-details p {
+  font-size: 13.28px;
+  font-weight: 400;
+  margin-bottom: 1.92px;
+}
+.profile-button {
+  float: right;
+}
+.profile-button h4 {
+  margin: 0;
+  padding: 9.6px 19.2px;
+  border: 1px solid #e70078;
+  color: #e70078;
+  font-size: 17.28px;
+  border-radius: 5.76px;
+}
+.profile-button h4:hover {
+  background-color: #e70078;
+  border: 1px solid #f0f2f5;
+  color: #fff;
+}
+.candiate-details {
+  padding-left: 19.2px;
+}
+.center-image img {
+  width: 100%;
+}
+.profile-bottom {
+  padding: 9.6px 28.8px 38.4px;
+}
+.action-button {
+  display: flex;
+  justify-content: space-between;
+}
+.like {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.like img {
+  width: 100%;
+  max-width: 19.2px;
+  max-height: 19.2px;
+}
+.dropup .dropdown-toggle::after {
+  display: none;
+}
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+  border: 0;
+}
+.like p {
+  font-size: 17.28px;
+  margin: 0;
+  padding-left: 3.84px;
+}
+.numberoflikes {
+  margin-top: 19.2px;
+}
+.numberoflikes p {
+  font-size: 17.28px;
+  margin-bottom: 7.68px;
+}
+.numberoflikes p b a {
+  font-size: 17.28px;
+  margin: 0;
+  font-weight: 600;
+  color: #333333;
+}
+.numberoflikes p a {
+  color: #bebebe;
+  font-weight: 500;
+  font-size: 13.44px;
+  text-decoration: none;
+}
+.input-group::placeholder {
+  font-size: 13.44px;
+  color: #333333;
+}
+.index-profile {
+  margin-bottom: 38.4px;
+}
+#owl-demo .item {
+  margin: 3px;
+}
+#owl-demo .item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.submitbutton {
+  background-color: #e70078;
+  width: max-content;
+  color: #fff;
+  padding: 5.76px 19.2px;
+  border-radius: 3.84px;
+  float: right;
+}
+.submitbutton h5 {
+  font-size: 13.44px;
+  margin-bottom: 0;
+}
+.first-slide {
+  height: max-content;
+  position: sticky;
+  top: 10%;
+}
+.upcoming h3 {
+  font-size: 23.04px;
+  color: #333333;
+  margin-bottom: 10px;
+}
+.upcoming {
+  margin-bottom: 19.2px;
+}
+.suggestions h3 {
+  font-size: 17.28px;
+  color: #333333;
+  margin-bottom: 19.2px;
+  font-weight: 600;
+}
+.suggestprofile {
+  margin: 19.2px 0;
+}
+.suggestpeople {
+  display: flex;
+}
+.suggestname {
+  padding-left: 19.2px;
+}
+.suggestname h4 {
+  font-size: 17.28px;
+  font-weight: 600;
+}
+.suggestname img {
+  padding-right: 3.84px;
+}
+.suggestname p {
+  font-size: 15.36px;
+  font-weight: 600;
+  color: #656565;
+}
+
+.suggestprofile .profile-button h4 {
+  border: none;
+}
+.policies {
+  display: flex;
+}
+.conditions {
+  font-size: 17.28px;
+  font-weight: 500;
+  color: #656565;
+  margin-right: 19.2px;
+}
+
+.text-small {
+  font-size: 85%;
+}
+
+.dropdown-toggle {
+  outline: 0;
+}
+.owl-dots {
+  text-align: center;
+}
+.owl-dots button {
+  width: 7.68px;
+  height: 7.68px;
+  color: #000 !important;
+  background-color: #e70078 !important;
+  border-radius: 100%;
+  margin: 0px 3.84px;
+}
+.owl-dots button.active {
+  background-color: #000 !important;
+}
+
+.banner-image {
+  position: relative;
+}
+
+.profile-pic {
+  width: max-content;
+  border-radius: 3.84px;
+  border: 1.92px solid #e70078;
+  padding: 0;
+  position: absolute;
+  bottom: 488px;
+  left: 353px;
+  background-color: #e70078;
+}
+.profile-pic img {
+  width: 100%;
+}
+.profile-info-bottom {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+.bi-three-dots {
+  font-size: 24px;
+  color: #e70078;
+}
+.bi-share {
+  font-size: 14px;
+  padding-right: 5px;
+}
+.bi-emoji-smile,
+.bi-send {
+  color: #333333;
+  font-size: 18px;
+}
+.bi-image {
+  font-size: 100px;
+  color: #e70078;
+}
+.btn-group .btn {
+  padding: 0;
+  margin-left: 10px;
+}
+.banner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.profile-action {
+  float: right;
+}
+.profile-action .btn-sm {
+  background-color: #e70078;
+  color: #fff;
+  padding: 9.6px 38.4px;
+  font-size: 17.28px;
+  font-weight: 500;
+  margin-right: 9.6px;
+}
+.profile-action .change-pass {
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+  color: #e70078;
+  padding: 9.6px 19.2px;
+  font-size: 17.28px;
+  font-weight: 500;
+}
+.profile-info {
+  margin-left: 38.4px;
+}
+.profile-info h2 {
+  font-size: 26.88px;
+  font-weight: 700;
+  margin-top: 19.2px;
+  margin-bottom: 9.6px;
+}
+.info-follow {
+  display: flex;
+}
+.info-follow p span {
+  font-size: 19.2px;
+  font-weight: 600;
+  margin: 0px 3.84px;
+}
+.info-follow p {
+  font-size: 17.28px;
+  margin: 0 19.2px;
+  cursor: pointer;
+}
+.info-follow p:first-child {
+  margin-left: 0 !important;
+}
+.profile-banner {
+  box-shadow: rgb(0 0 0 / 15%) 0px 5px 9px;
+  padding: 0 0 19.2px;
+}
+.profile-status {
+  padding: 19.2px 0;
+  background-color: #dfe5ef;
+}
+
+.candidate-status {
+  padding: 19.2px 57.6px;
+  background-color: #fff;
+}
+.candidate-status .owl-carousel .item img {
+  height: 57.6px;
+  width: 57.6px;
+  border-radius: 100%;
+}
+.itemtabs {
+  padding: 19.2px 0;
+  background-color: #dfe5ef;
+}
+.tabmenu .nav-tabs {
+  background-color: #ffffff;
+  box-shadow: rgb(0 0 0 / 15%) 0px -1px 9px;
+  padding: 19.2px 19.2px;
+}
+.tabmenu li.nav-item {
+  margin: 0 auto;
+}
+.tabmenu .nav-item .nav-link.active {
+  color: #ffffff;
+  background-color: #e70078;
+  border-color: inherit;
+  padding: 9.6px 38.4px;
+}
+.nav-tabs {
+  border-bottom: inherit !important;
+}
+.nav-tabs .nav-link:hover {
+  border: inherit;
+}
+.shareaudition {
+  position: relative;
+  bottom: 0px;
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 9.6px;
+  align-items: center;
+}
+.shareimage {
+  max-width: 19.2px;
+  max-height: 19.2px;
+  display: flex;
+  align-items: center;
+}
+#owl-demo .item {
+  position: relative;
+}
+.shareimage img {
+  padding-right: 3.84px;
+}
+
+.galley-image {
+  margin: 5.76px 0;
+  border-radius: 5.76px;
+}
+.galley-image img {
+  width: 100%;
+}
+.candidate-actions {
+  background-color: #000;
+  width: 100%;
+}
+.allsuggest {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3.84px;
+}
+.allsuggest p {
+  font-weight: 600;
+}
+.allsuggest a {
+  text-decoration: none;
+  color: #18468d;
+}
+.suggestprofile .profile-button h4 {
+  padding: 5px 10px;
+}
+.navmenu .form-control::placeholder {
+  font-size: 15.36px;
+}
+.navmenu .searchform {
+  margin-left: 57.6px;
+  width: 37%;
+}
+
+.filter-form {
+  background-color: #fff;
+  padding: 19.2px;
+}
+.filter-form #roles {
+  width: 100%;
+  border: 1px solid #f1f2f6;
+  background-color: #f1f2f6;
+  padding: 6px 19.2px;
+  margin-bottom: 10px;
+  border-radius: 5.76px;
+}
+.filter-form .dropdown-menu.show {
+  width: 100%;
+}
+.filter-form #roles:focus-visible {
+  border: 0;
+  outline: 0;
+}
+.filters-fields .age {
+  display: flex;
+}
+.filters-fields .fromfield {
+  margin-right: 5.76px;
+  margin-bottom: 19.2px;
+}
+.filters-fields .fromfield input::placeholder {
+  color: #333333 !important;
+}
+.filters-fields .fromfield input {
+  background-color: #f1f2f6;
+}
+.filter-submit {
+  text-align: center;
+}
+.filter-submit .btn {
+  background-color: #e70078;
+  color: #ffffff;
+  padding: 3.84px 19.2px;
+  font-weight: 500;
+}
+.filter-submit .btn:hover {
+  border: 1px solid #e70078;
+}
+.second-column {
+  width: 28%;
+}
+.index-status {
+  padding-top: 96px;
+}
+.candiate-details p.idname {
+  font-weight: 700;
+  color: #e70078;
+}
+.modal-backdrop {
+  z-index: 1;
+}
+.loginmodal {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.loginmodal .modal-header {
+  border-bottom: 0;
+  margin: 0 auto;
+}
+.loginmodal .btn-close {
+  position: absolute;
+  top: -8px;
+  right: -13px;
+  color: #e70078;
+  background-color: #fff;
+  opacity: 1;
+  border-radius: 100%;
+  border: 1px solid #e70078;
+}
+.loginlogo {
+  text-align: center;
+  padding: 20px 0 10px 0;
+}
+.loginlogo img {
+  width: 100px;
+}
+.loginmodal {
+  background-color: #dfe5ef;
+}
+.loginmodal .modal-body {
+  padding: 0 50px;
+}
+.loginmodal .modal-dialog {
+  width: 100%;
+  max-width: 34%;
+}
+.loginmodal .modal-content {
+  border-radius: 0;
+  border: 0;
+}
+.loginmodal form h3 {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+.loginmodal .form-control {
+  padding: 20px;
+  border: 1px solid #dfe5ef;
+}
+.loginmodal .form-control::placeholder {
+  text-align: center;
+  color: #000;
+}
+.loginmodal .submitbutton {
+  text-align: center;
+  float: inherit;
+  margin: 0 auto;
+}
+.loginmodal .submitbutton .btn {
+  color: #fff;
+  font-weight: 500;
+}
+.forgotpassword p {
+  font-weight: 400;
+  text-align: center;
+  color: #000;
+  margin-bottom: 0;
+}
+.forgotpassword a {
+  text-decoration: none;
+}
+.forgotpassword p span {
+  font-weight: 400;
+  text-align: center;
+  color: #e70078;
+}
+.btn-close:focus {
+  box-shadow: inherit;
+}
+.leftcolumn img {
+  width: 100%;
+}
+.rightcolumn {
+  padding: 0px 50px;
+}
+
+.rightcolumn .loginlogo img {
+  margin-bottom: 20px;
+}
+
+.rightcolumn .btn-group {
+  width: 100%;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+.rightcolumn .btn-group button {
+  color: #333333;
+}
+.rightcolumn .input-group::placeholder {
+  color: #333333;
+}
+.rightcolumn .form-control {
+  padding: 15px;
+  text-align: center;
+}
+.rightcolumn .btn-group .btn {
+  padding: 15px;
+}
+.rightcolumn .submitbutton1 {
+  margin: 0 auto;
+  margin-top: 30px;
+  float: inherit;
+}
+.rightcolumn .submitbutton1 .btn {
+  color: #fff;
+  font-weight: 500;
+}
+.loginbutton p {
+  font-weight: 500;
+  text-align: center;
+}
+.loginbutton button {
+  color: #e70078;
+  font-weight: 700;
+  padding-left: 0;
+}
+.loginbutton button:hover {
+  color: #e70078;
+}
+.profile-details {
+  box-shadow: rgb(0 0 0 / 22%) 1px 0px 10px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.profile-gallery {
+  box-shadow: rgb(0 0 0 / 22%) 1px 0px 10px;
+  margin-top: 20px;
+  padding: 40px;
+  background-color: #fff;
+}
+.actor-details {
+  position: relative;
+}
+
+.actor-details h3::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 1px;
+  background: #e70078;
+  left: 0;
+  bottom: 15px;
+}
+.actor-details h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+.profile-details .candidate-gallery {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.editbutton a {
+  text-decoration: none;
+  color: #fff;
+}
+.editbutton {
+  display: flex !important;
+  align-items: center;
+  background-color: #e70078;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+}
+.editbutton img {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+.editbutton p {
+  margin-bottom: 0;
+}
+.candiate-about .actor-details h3::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 1px;
+  background: #e70078;
+  left: 0;
+  top: 22px;
+  bottom: inherit;
+}
+.candiate-about .actor-details h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.candiate-about .actor-details p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+}
+.tabmenu button {
+  color: #333333;
+  font-size: 20px;
+  font-weight: 500;
+}
+.tabmenu button:hover {
+  color: #333333;
+}
+.candidate-info p span {
+  font-size: 18px;
+  font-weight: 500;
+}
+.candidate-info p {
+  font-size: 18px;
+}
+.candidate-info h5 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 20px 0;
+  background-color: #dfe5ef;
+  width: fit-content;
+  padding: 10px;
+}
+#contact .actor-details h3::after {
+  content: "";
+  position: absolute;
+  width: 201px;
+  height: 1px;
+  background: #e70078;
+  left: 0;
+  bottom: 10px;
+}
+
+.uploadgallery .nav-link {
+  color: #e70078 !important;
+}
+.uploadgallery .modal-header {
+  align-items: center;
+}
+.uploadgallery .nav-tabs {
+  justify-content: space-around;
+}
+.uploadgallery button {
+  border: 0 !important;
+}
+.uploadgallery .btn-close {
+  position: absolute;
+  top: -8px;
+  right: -13px;
+  color: #e70078;
+  background-color: #fff;
+  opacity: 1;
+  border-radius: 100%;
+  border: 1px solid #e70078 !important;
+}
+.post-upload {
+  text-align: center;
+  padding: 100px;
+}
+.upload-icon img {
+  width: 100px;
+}
+.upload-icon {
+  margin-bottom: 20px;
+}
+.upload-icon p {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 10px;
+}
+.upload-header {
+  margin: 0 auto;
+}
+.upload-header h4 {
+  margin-bottom: 0px;
+  font-size: 20px;
+}
+.uploadgallery .nav-link.active {
+  padding: 10px 20px !important;
+  background-color: #e70078 !important;
+  color: #fff !important;
+  border-radius: 5px !important;
+}
+.candidate-info .actor-details {
+  padding-left: 0;
+}
+.candidate-personal p b {
+  float: right;
+}
+.tablevideo .modal-dialog {
+  width: 100%;
+  max-width: 31%;
+}
+.candidate-info tbody tr td {
+  vertical-align: middle;
+}
+.candidate-info tbody tr th {
+  vertical-align: middle;
+}
+.candidate-info table {
+  text-align: center;
+}
+.candidate-info table button {
+  color: #18468d;
+}
+.candidate-info .submitbutton .btn {
+  color: #fff !important;
+}
+.projectheadpopup .btn-group {
+  width: 100%;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+.projectheadpopup .btn-group button {
+  color: #333333;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+}
+.projectheadpopup .btn-group .form-control {
+  color: #333333;
+}
+.profile-head {
+  height: max-content;
+  padding: 9.6px 28.8px;
+  display: flex;
+}
+.profile-icon{
+  width: 3vw;
+  height: 6vh;
+}
+
+.profile-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profile-name h3 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+.profile-name {
+  padding-left: 10px;
+}
+.search-person {
+  background-color: #fff;
+  border-radius: 5px;
+}
+.profile-name p {
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+.profile-main {
+  width: 100%;
+  height: 40vh;
+}
+
+.profile-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.follow-button {
+  background-color: #e70078;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  transition: 0.4s all ease-in-out;
+}
+.follow-button p {
+  padding: 0.5vw;
+  font-size: 16px;
+  font-weight: 500;
+}
+.follow-button a {
+  text-decoration: none;
+  color: #fff;
+}
+.follow-button:hover a {
+  color: #e70078;
+  transition: 0.4s all ease-in-out;
+}
+.follow-button:hover {
+  background-color: #fff;
+}
+
+.edit-details h3::after {
+  bottom: 9px;
+}
+.edit-details .candidate-personal {
+  margin-bottom: 30px;
+  position: relative;
+}
+.edit-details .candidate-personal label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 2px;
+  color: #555;
+}
+.candidate-personal .candidate-input i {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  color: #e70078;
+}
+.candidate-input .form-control {
+  font-size: 14px;
+  padding: 8px 10px;
+  height: auto;
+  border-radius: 2px;
+}
+.form-control {
+  border: 1px solid #ccd0d5;
+}
+.candidate-personal .edit-dropdown {
+  width: 100%;
+  border: 1px solid #ced4da;
+  background-color: #ffffff;
+  padding: 9.6px 19.2px;
+  margin-bottom: 0px;
+  border-radius: 5.76px;
+}
+.candidate-personal .btn-group .btn {
+  text-align: left;
+  font-size: 16px;
+}
+
+.candidate-personal .btn-group .btn::after {
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+.candidate-personal ul li button {
+  font-size: 16px;
+}
+.candidate-personal .edit-dropdown:focus-visible {
+  outline: 0;
+}
+.editradio {
+  display: flex;
+  justify-content: space-evenly;
+}
+.candidate-personal .edit-dropdown {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 2px;
+  color: #555;
+}
