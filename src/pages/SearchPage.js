@@ -6,7 +6,14 @@ import ProfileCard from "../components/ProfileCard";
 import { LOAD_SEARCH } from "../redux/actions/search";
 
 const SearchPage = () => {
+  const Id = useParams();
+  console.log(Id)
+  const dispatch = useDispatch();
   const { searchInfo, isLoading } = useSelector((state) => state.search);
+  useEffect(() => {
+    dispatch(LOAD_SEARCH(Id.id));
+  }, [Id]);
+
   return (
     <>
       {isLoading ? (

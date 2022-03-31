@@ -1,34 +1,60 @@
-import React, { useEffect, useRef } from "react";
+import axios from "axios";
+import React, { useEffect } from "react";
+import { useInfiniteQuery, useQuery } from "react-query";
 import { useDispatch, useSelector } from "react-redux";
+import { postURL } from "../api";
 import Feed from "../components/Feed";
 import Filter from "../components/Filter";
 import { LOAD_POSTS } from "../redux/actions/posts";
 
 const HomePage = () => {
-  const dispatch = useDispatch();
-  const { posts } = useSelector((state) => state.posts);
-  var page = 0;
+  const fetchPosts = async (pageParam) => {
+    if (pageParam) {
+      const res = await axios.get(`${pageParam}`);
+      return res.data;
+    } else {
+      const res = await axios.get(
+        `https://hyderabadcastingclub.com/api/profiles/`
+      );
+      return res.data;
+    }
+  };
+
+  const { data, hasNextPage, fetchNextPage, isLoading } = useInfiniteQuery(
+    "posts",
+    ({ pageParam }) => fetchPosts(pageParam),
+    {
+      getNextPageParam: (lastPage, allPages) => lastPage.next,
+    }
+  );
 
   useEffect(() => {
-    dispatch(LOAD_POSTS(page));
-  }, [dispatch]);
-  const first = useRef();
-  console.log(first);
-  // const observer = useRef(new IntersectionObserver(()=>{},{threshold:1}))
-  // const handleScroll = (e) => {
-  //   if (
-  //     window.innerHeight + e.target.documentElement.scrollTop + 5 >=
-  //       e.target.documentElement.scrollHeight
-  //   ) {
-  //     page = page + 10;
-  //     dispatch(LOAD_POSTS(page));
-  //   }
-  // };
+    let fetching = false;
+    const onScroll = async (event) => {
+      const { scrollHeight, scrollTop, clientHeight } =
+        event.target.scrollingElement;
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-  // }, []);
+      if (!fetching && scrollHeight - scrollTop <= clientHeight * 1.5) {
+        fetching = true;
+        console.log("bootom");
+        if (hasNextPage) {
+          console.log("in if");
+          await fetchNextPage();
+        }
+        fetching = false;
+      }
+    };
 
+    document.addEventListener("scroll", onScroll);
+
+    return () => {
+      document.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
+  // data.pages.map((page) => console.log(page.results));
+
+  // console.log(data.pages);
   return (
     <>
       <section className="postcard">
@@ -37,10 +63,16 @@ const HomePage = () => {
             <div className="col-md-3">
               <Filter />
             </div>
-            <div ref={first} className="col-md-5">
-              {posts.map((user) => (
-                <Feed user={user} />
-              ))}
+            <div className="col-md-5">
+              {isLoading || !data ? (
+                <h3>loading</h3>
+              ) : (
+                data.pages.map((page) =>
+                  page.results.map((user) => (
+                    <Feed key={user.user.id} user={user} />
+                  ))
+                )
+              )}
             </div>
             <div className="col-md-4 second-column">
               <div className="second-slide">

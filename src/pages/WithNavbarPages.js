@@ -11,7 +11,7 @@ const WithNavbarPages = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/search" element={<SearchPage />} />
+        <Route path="/search/:id" element={<SearchPage />} />
         <Route path="/profile/:id" element={<ProfilePage />} />
       </Routes>
     </>

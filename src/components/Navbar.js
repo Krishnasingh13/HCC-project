@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { signOutAction } from "../redux/actions/auth";
-import { LOAD_SEARCH } from "../redux/actions/search";
 
 const Navbar = () => {
   const { user, isLoggedIn } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [search, setSearch] = useState("");
 
   const signOutHandler = () => {
@@ -15,7 +15,7 @@ const Navbar = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(LOAD_SEARCH(search));
+    navigate(`/search/${search}`);
     setSearch('')
   };
 

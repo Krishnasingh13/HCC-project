@@ -593,6 +593,7 @@ h6 {
   max-width: 34%;
 }
 .loginmodal .modal-content {
+  height: 50%;
   border-radius: 0;
   border: 0;
 }
@@ -853,8 +854,9 @@ h6 {
   float: right;
 }
 .tablevideo .modal-dialog {
-  width: 100%;
-  max-width: 31%;
+  width: max-content;
+  /* max-width: 40%; */
+  /* max-height: 50%; */
 }
 .candidate-info tbody tr td {
   vertical-align: middle;

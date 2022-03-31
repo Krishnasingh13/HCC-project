@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Select from "react-select";
 import { useNavigate } from "react-router-dom";
 import { categories_list, gender_list, skills_list } from "../data";
 import {
@@ -21,7 +22,7 @@ const Filter = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    navigate(`/search`);
+    navigate(`/search/filter`);
   };
 
   return (
@@ -33,7 +34,18 @@ const Filter = () => {
             <div className="filters-fields">
               <div className="row">
                 <div className="col-md-12">
-                  <select id="roles" name="Categories">
+                  {/* {categories_list?.length>0?
+                  categories_list?.map((e)=>(
+                    <Select options={e.value}/>
+                  ))  
+                } */}
+                  {/* {categories_list?.length > 0
+                    ? categories_list.map((e, i) => (
+                      ))
+                      : ""} */}
+                      <Select  name="Categories" id="roles" />
+
+                  {/* <select id="roles" name="Categories">
                     <option value="">Categories</option>
                     {categories_list?.length > 0
                       ? categories_list.map((e, i) => (
@@ -42,7 +54,7 @@ const Filter = () => {
                           </option>
                         ))
                       : ""}
-                  </select>
+                  </select> */}
                 </div>
               </div>
             </div>

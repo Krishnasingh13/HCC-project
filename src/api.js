@@ -11,7 +11,7 @@ export const signOutURL = () => `${base_url}logout/`;
 
 //POSTS
 //Post_URL
-export const postURL = (page) => `${base_url}profiles/?offset=${page}&limit=5`;
+export const postURL = (page) => `${base_url}profiles/?offset=${page}&limit=10`;
 
 
 //DATA

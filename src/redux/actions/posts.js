@@ -9,6 +9,4 @@ export const LOAD_POSTS = (page) => async (dispatch) => {
       posts: posts.data.results,
     },
   });
-
-  
 };
